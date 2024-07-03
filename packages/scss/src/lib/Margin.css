@@ -1,0 +1,288 @@
+/**=========================================================================================================
+============================================================================================================
+============================================================================================================
+======================================== VARIABLES =========================================================
+============================================================================================================
+============================================================================================================
+==========================================================================================================**/
+/**
+* TABLE OF CONTENTS
+*
+* COLORS
+* Brand Colors ................................. These are the main brand colors. They will be used for the most
+* Neutral Colors ............................... white, black, gray scale, secondary colors
+* Ultinity colors .............................. Other colors to represent states: success, warning, error, etc.
+*
+* TYPOGRAPHY 
+* Font Family .................................. The font family used in the design system
+* Font weight .................................. The font weight
+* Font sizes ................................... The font size for body text, paragraph, heading, etc.
+* Heading sizes ................................ The font size for heading
+*
+* BREAKPOINTS
+* Breakpoints .................................. Global responsive breakpoints definitions
+*
+* SPACING
+* Spacing ...................................... Global spacing definitions
+**/
+/*=============================================
+=            COLORS            =
+=============================================*/
+/* Brand Colors */
+/*=====  End of COLORS  ======*/
+/*=============================================
+=            TYPOGRAPHY            =
+=============================================*/
+/**
+ *
+ * 1) Lato font is used for the heading mostly
+ * 2) Arial font is used for the body text
+ */
+/* Font Families */
+/* 1 */
+/* 2 */
+/* Font sizes */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 18px */
+/* 20px */
+/* Heading sizes */
+/* 22px */
+/* 20px */
+/* 18px */
+/* 16px */
+/* 14px */
+/* 12px */
+/* Font weight */
+/*===== End of TYPOGRAPHY  ======*/
+/*=============================================
+=            BREAKPOINTS            =
+=============================================*/
+/*=====  End of BREAKPOINTS  ======*/
+/*=============================================
+=                   Spacing                   =
+=============================================*/
+/**
+ *
+ * This file defines the actual colors that will be used for styling. They will default to the palette that
+ * is defined in the variables file, but can be overridden by the devs with their own custom colors.
+ *
+ */
+/*=============================================
+ =            Global text colors               =
+ =============================================*/
+/*=============================================
+ =            Buttons                         =
+ =============================================*/
+/*=============================================
+=            Foundation Typography            =
+=============================================*/
+/*=============================================
+=            Foundation Heading Size          =
+=============================================*/
+/*=============================================
+=            Heading font weights             =
+=============================================*/
+/*=============================================
+=            MIXINS                           =
+=============================================*/
+.kp-margin-none {
+  margin: 0px !important;
+}
+
+.kp-margin-top-none {
+  margin-top: 0px !important;
+}
+
+.kp-margin-right-none {
+  margin-right: 0px !important;
+}
+
+.kp-margin-bottom-none {
+  margin-bottom: 0px !important;
+}
+
+.kp-margin-left-none {
+  margin-left: 0px !important;
+}
+
+.kp-margin-xxxs {
+  margin: 4px !important;
+}
+
+.kp-margin-top-xxxs {
+  margin-top: 4px !important;
+}
+
+.kp-margin-right-xxxs {
+  margin-right: 4px !important;
+}
+
+.kp-margin-bottom-xxxs {
+  margin-bottom: 4px !important;
+}
+
+.kp-margin-left-xxxs {
+  margin-left: 4px !important;
+}
+
+.kp-margin-xxs {
+  margin: 6px !important;
+}
+
+.kp-margin-top-xxs {
+  margin-top: 6px !important;
+}
+
+.kp-margin-right-xxs {
+  margin-right: 6px !important;
+}
+
+.kp-margin-bottom-xxs {
+  margin-bottom: 6px !important;
+}
+
+.kp-margin-left-xxs {
+  margin-left: 6px !important;
+}
+
+.kp-margin-xs {
+  margin: 12px !important;
+}
+
+.kp-margin-top-xs {
+  margin-top: 12px !important;
+}
+
+.kp-margin-right-xs {
+  margin-right: 12px !important;
+}
+
+.kp-margin-bottom-xs {
+  margin-bottom: 12px !important;
+}
+
+.kp-margin-left-xs {
+  margin-left: 12px !important;
+}
+
+.kp-margin-sm {
+  margin: 16px !important;
+}
+
+.kp-margin-top-sm {
+  margin-top: 16px !important;
+}
+
+.kp-margin-right-sm {
+  margin-right: 16px !important;
+}
+
+.kp-margin-bottom-sm {
+  margin-bottom: 16px !important;
+}
+
+.kp-margin-left-sm {
+  margin-left: 16px !important;
+}
+
+.kp-margin-md {
+  margin: 24px !important;
+}
+
+.kp-margin-top-md {
+  margin-top: 24px !important;
+}
+
+.kp-margin-right-md {
+  margin-right: 24px !important;
+}
+
+.kp-margin-bottom-md {
+  margin-bottom: 24px !important;
+}
+
+.kp-margin-left-md {
+  margin-left: 24px !important;
+}
+
+.kp-margin-lg {
+  margin: 32px !important;
+}
+
+.kp-margin-top-lg {
+  margin-top: 32px !important;
+}
+
+.kp-margin-right-lg {
+  margin-right: 32px !important;
+}
+
+.kp-margin-bottom-lg {
+  margin-bottom: 32px !important;
+}
+
+.kp-margin-left-lg {
+  margin-left: 32px !important;
+}
+
+.kp-margin-xl {
+  margin: 48px !important;
+}
+
+.kp-margin-top-xl {
+  margin-top: 48px !important;
+}
+
+.kp-margin-right-xl {
+  margin-right: 48px !important;
+}
+
+.kp-margin-bottom-xl {
+  margin-bottom: 48px !important;
+}
+
+.kp-margin-left-xl {
+  margin-left: 48px !important;
+}
+
+.kp-margin-xxl {
+  margin: 64px !important;
+}
+
+.kp-margin-top-xxl {
+  margin-top: 64px !important;
+}
+
+.kp-margin-right-xxl {
+  margin-right: 64px !important;
+}
+
+.kp-margin-bottom-xxl {
+  margin-bottom: 64px !important;
+}
+
+.kp-margin-left-xxl {
+  margin-left: 64px !important;
+}
+
+.kp-margin-xxxl {
+  margin: 96px !important;
+}
+
+.kp-margin-top-xxxl {
+  margin-top: 96px !important;
+}
+
+.kp-margin-right-xxxl {
+  margin-right: 96px !important;
+}
+
+.kp-margin-bottom-xxxl {
+  margin-bottom: 96px !important;
+}
+
+.kp-margin-left-xxxl {
+  margin-left: 96px !important;
+}

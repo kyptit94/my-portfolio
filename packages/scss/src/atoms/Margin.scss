@@ -1,0 +1,16 @@
+@import './foundations/all';
+
+$sides: (top, right, bottom, left);
+
+
+@each $name, $value in $spacing {
+  .kp-margin-#{$name} {
+    margin: $value !important;
+  }
+
+  @each $side in $sides {
+    .kp-margin-#{$side}-#{$name} {
+      margin-#{$side}: $value !important;
+    }
+  }
+}

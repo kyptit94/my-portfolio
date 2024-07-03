@@ -1,3 +1,3 @@
-import { Button } from "./molecules";
+import { Button, Heading, Text, Link, Image, Margin} from "./molecules";
 
-export { Button };
+export { Button, Heading, Text, Link, Image, Margin};
