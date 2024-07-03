@@ -1,0 +1,27 @@
+/**
+ *
+ * This file defines the actual colors that will be used for styling. They will default to the palette that
+ * is defined in the variables file, but can be overridden by the devs with their own custom colors.
+ *
+ */
+
+/*=============================================
+ =            Global text colors               =
+ =============================================*/
+
+$body-text-color: var(--kp-body-text-color, $dark-light) !default;
+$body-bg-color: var(--kp-body-bg-color, $yellow) !default;
+$link-color: var(--kp-link-color, $dark) !default;
+$link-color-active: var(--kp-link-color-active, $purple) !default;
+
+/*=============================================
+ =            Buttons                         =
+ =============================================*/
+
+$btn-primary-color: var(--kp-btn-primary-color, $white) !default;
+$btn-primary-bg-color: var(--kp-btn-primary-bg-color, $red) !default;
+$btn-primary-color-hover: var(--kp-btn-primary-hover-color, $dark) !default;
+$btn-primary-bg-color-hover: var(
+  --kp-btn-primary-hover-bg-color,
+  $white
+) !default;

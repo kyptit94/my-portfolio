@@ -1,0 +1,28 @@
+/*=============================================
+=            Foundation Typography            =
+=============================================*/
+
+$kp-body-font-size: var(--kp-body-font-size, $fs-sm) !default;
+$kp-body-font-weight: var(--kp-body-font-weight, $fw-normal) !default;
+
+/*=============================================
+=            Foundation Heading Size          =
+=============================================*/
+
+$kp-h1-font-size: var(--kp-h1-font-size, $fs-h1) !default;
+$kp-h2-font-size: var(--kp-h2-font-size, $fs-h2) !default;
+$kp-h3-font-size: var(--kp-h3-font-size, $fs-h3) !default;
+$kp-h4-font-size: var(--kp-h4-font-size, $fs-h4) !default;
+$kp-h5-font-size: var(--kp-h5-font-size, $fs-h5) !default;
+$kp-h6-font-size: var(--kp-h6-font-size, $fs-h6) !default;
+
+/*=============================================
+=            Heading font weights             =
+=============================================*/
+
+$kp-h1-font-weight: var(--kp-h1-font-weight, $fw-bold) !default;
+$kp-h2-font-weight: var(--kp-h2-font-weight, $fw-semibold) !default;
+$kp-h3-font-weight: var(--kp-h3-font-weight, $fw-medium) !default;
+$kp-h4-font-weight: var(--kp-h4-font-weight, $fw-normal) !default;
+$kp-h5-font-weight: var(--kp-h5-font-weight, $fw-light) !default;
+$kp-h6-font-weight: var(--kp-h6-font-weight, $fw-light) !default;

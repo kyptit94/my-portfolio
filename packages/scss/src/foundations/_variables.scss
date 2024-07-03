@@ -1,0 +1,123 @@
+/**=========================================================================================================
+============================================================================================================
+============================================================================================================
+======================================== VARIABLES =========================================================
+============================================================================================================
+============================================================================================================
+==========================================================================================================**/
+
+/**
+* TABLE OF CONTENTS
+*
+* COLORS
+* Brand Colors ................................. These are the main brand colors. They will be used for the most
+* Neutral Colors ............................... white, black, gray scale, secondary colors
+* Ultinity colors .............................. Other colors to represent states: success, warning, error, etc.
+*
+* TYPOGRAPHY 
+* Font Family .................................. The font family used in the design system
+* Font weight .................................. The font weight
+* Font sizes ................................... The font size for body text, paragraph, heading, etc.
+* Heading sizes ................................ The font size for heading
+*
+* BREAKPOINTS
+* Breakpoints .................................. Global responsive breakpoints definitions
+*
+* SPACING
+* Spacing ...................................... Global spacing definitions
+**/
+
+/*=============================================
+=            COLORS            =
+=============================================*/
+
+/* Brand Colors */
+$yellow: #eee6cd;
+$dark: #303030;
+$dark-light: #565656;
+$purple: #65265d;
+$purple-light: #601e58;
+$red: #ef2853;
+$white: #fff;
+
+/*=====  End of COLORS  ======*/
+
+/*=============================================
+=            TYPOGRAPHY            =
+=============================================*/
+
+/**
+ *
+ * 1) Lato font is used for the heading mostly
+ * 2) Arial font is used for the body text
+ */
+
+/* Font Families */
+$lato: "Lato", sans-serif; /* 1 */
+$arial: "Arial", sans-serif; /* 2 */
+
+/* Font sizes */
+$fs-xs: 12px; /* 12px */
+$fs-sm: 14px; /* 14px */
+$fs-md: 16px; /* 16px */
+$fs-lg: 18px; /* 18px */
+$fs-xl: 20px; /* 20px */
+
+/* Heading sizes */
+$fs-h1: 22px; /* 22px */
+$fs-h2: 20px; /* 20px */
+$fs-h3: 18px; /* 18px */
+$fs-h4: 16px; /* 16px */
+$fs-h5: 14px; /* 14px */
+$fs-h6: 12px; /* 12px */
+
+/* Font weight */
+$fw-light: 300;
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+$fw-extrabold: 800;
+$fw-black: 900;
+
+/*===== End of TYPOGRAPHY  ======*/
+
+/*=============================================
+=            BREAKPOINTS            =
+=============================================*/
+
+$breakpoints: (
+  md: 768px,
+  // 768px
+  lg: 1024px,
+  // 1024px
+  xl: 1280px,
+  // 1280px
+);
+
+/*=====  End of BREAKPOINTS  ======*/
+
+/*=============================================
+=                   Spacing                   =
+=============================================*/
+
+$spacing: (
+  xxxs: 4px,
+  // 4px
+  xxs: 6px,
+  // 6px
+  xs: 12px,
+  // 12px
+  sm: 16px,
+  // 16px
+  md: 24px,
+  // 24px
+  lg: 32px,
+  // 32px
+  xl: 48px,
+  // 48px
+  xxl: 64px,
+  // 64px
+  xxxl: 96px,
+  // 96px
+);

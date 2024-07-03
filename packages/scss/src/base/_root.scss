@@ -1,0 +1,24 @@
+:root {
+  --kp-body-text-color: #{$dark-light};
+  --kp-body-bg-color: #{$yellow};
+  --kp-link-color: #{$dark};
+  --kp-link-color-active: #{$purple};
+  --kp-btn-primary-color: #{$white};
+  --kp-btn-primary-bg-color: #{$red};
+  --kp-btn-primary-hover-color: #{$dark};
+  --kp-btn-primary-hover-bg-color: #{$white};
+  --kp-body-font-size: #{$fs-sm};
+  --kp-body-font-weight: #{$fw-normal};
+  --kp-h1-font-size: #{$fs-h1};
+  --kp-h2-font-size: #{$fs-h2};
+  --kp-h3-font-size: #{$fs-h3};
+  --kp-h4-font-size: #{$fs-h4};
+  --kp-h5-font-size: #{$fs-h5};
+  --kp-h6-font-size: #{$fs-h6};
+  --kp-h1-font-weight: #{$fw-bold};
+  --kp-h2-font-weight: #{$fw-semibold};
+  --kp-h3-font-weight: #{$fw-medium};
+  --kp-h4-font-weight: #{$fw-normal};
+  --kp-h5-font-weight: #{$fw-light};
+  --kp-h6-font-weight: #{$fw-light};
+}
