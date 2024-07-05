@@ -1,0 +1,39 @@
+@import './foundations/all';
+.kl_menu {
+    .kl_menu__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        
+
+        .kl_menu__nav__item {
+            a {
+                color: $text-link-color;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+            &:hover {
+                color: $text-link-color-hover;
+            }
+        }
+    }
+
+    .kl_menu__button {
+        display: block;
+    }
+
+    .kl_menu__nav {
+        display: none;
+    }
+
+    @include tablet {
+        .kl_menu__button {
+            display: none
+        }
+        .kl_menu__nav {
+           display: block;
+        }
+    }
+}

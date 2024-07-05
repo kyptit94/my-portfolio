@@ -29039,7 +29039,45 @@ var Margin = function (_a) {
   }, children);
 };
 exports.default = Margin;
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _Link = _interopRequireDefault(require("../../atoms/Link/Link.js"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Menu = function (_a) {
+  var items = _a.items;
+  var _b = _react.default.useState(false),
+    isOpen = _b[0],
+    setIsOpen = _b[1];
+  var toggleMenu = function () {
+    setIsOpen(!isOpen);
+  };
+  var renderMenuItem = function (items, className) {
+    return _react.default.createElement("ul", {
+      className: className
+    }, items.map(function (item, index) {
+      return _react.default.createElement("li", {
+        className: "kl_menu__nav__item",
+        key: index
+      }, _react.default.createElement(_Link.default, {
+        href: item.href
+      }, item.title));
+    }));
+  };
+  return _react.default.createElement("div", {
+    className: "kl_menu"
+  }, _react.default.createElement("button", {
+    className: "kl_menu__button",
+    onClick: toggleMenu
+  }, "Menu"), isOpen && renderMenuItem(items, "kl_menu__mobile_nav"), renderMenuItem(items, "kl_menu__nav"));
+};
+exports.default = Menu;
+},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29075,6 +29113,12 @@ Object.defineProperty(exports, "Margin", {
     return _Margin.default;
   }
 });
+Object.defineProperty(exports, "Menu", {
+  enumerable: true,
+  get: function () {
+    return _Menu.default;
+  }
+});
 Object.defineProperty(exports, "Text", {
   enumerable: true,
   get: function () {
@@ -29087,8 +29131,9 @@ var _Text = _interopRequireDefault(require("./atoms/Text/Text.js"));
 var _Link = _interopRequireDefault(require("./atoms/Link/Link.js"));
 var _Image = _interopRequireDefault(require("./atoms/Image/Image.js"));
 var _Margin = _interopRequireDefault(require("./atoms/Margin/Margin.js"));
+var _Menu = _interopRequireDefault(require("./molecules/Menu/Menu.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@kl.e/react/lib/atoms/Button/Button.js","./atoms/Heading/Heading.js":"../../../node_modules/@kl.e/react/lib/atoms/Heading/Heading.js","./atoms/Text/Text.js":"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js","./atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","./atoms/Image/Image.js":"../../../node_modules/@kl.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@kl.e/react/lib/atoms/Margin/Margin.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Button/Button.js":"../../../node_modules/@kl.e/react/lib/atoms/Button/Button.js","./atoms/Heading/Heading.js":"../../../node_modules/@kl.e/react/lib/atoms/Heading/Heading.js","./atoms/Text/Text.js":"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js","./atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","./atoms/Image/Image.js":"../../../node_modules/@kl.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@kl.e/react/lib/atoms/Margin/Margin.js","./molecules/Menu/Menu.js":"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -29139,7 +29184,7 @@ function reloadCSS() {
   }, 50);
 }
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@kl.e/scss/src/lib/Margin.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../../../node_modules/@kl.e/scss/src/lib/Menu.css":[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
@@ -29151,18 +29196,28 @@ module.exports = reloadCSS;
 var _react = _interopRequireDefault(require("react"));
 var _client = require("react-dom/client");
 var _react2 = require("@kl.e/react");
-require("@kl.e/scss/src/lib/Margin.css");
+require("@kl.e/scss/src/lib/Menu.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var rootElement = document.getElementById("root");
 if (rootElement) {
-  (0, _client.createRoot)(rootElement).render(_react.default.createElement(_react.default.StrictMode, null, _react.default.createElement(_react2.Margin, {
-    size: "xl",
-    left: true
-  }, _react.default.createElement(_react2.Text, {
-    text: "Hello, World! awesome"
+  (0, _client.createRoot)(rootElement).render(_react.default.createElement(_react.default.StrictMode, null, _react.default.createElement("div", {
+    style: {
+      background: "#000"
+    }
+  }, _react.default.createElement(_react2.Menu, {
+    items: [{
+      title: "Home",
+      href: "#"
+    }, {
+      title: "About",
+      href: "#about"
+    }, {
+      title: "Contact",
+      href: "#contact"
+    }]
   }))));
 }
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Margin.css":"../../../node_modules/@kl.e/scss/src/lib/Margin.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Menu.css":"../../../node_modules/@kl.e/scss/src/lib/Menu.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29187,7 +29242,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50573" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55824" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
