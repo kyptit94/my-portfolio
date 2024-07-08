@@ -28989,9 +28989,21 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e
 var Image = function (_a) {
   var src = _a.src,
     alt = _a.alt,
-    className = _a.className;
+    width = _a.width,
+    height = _a.height,
+    round = _a.round,
+    responsive = _a.responsive;
+  var className = "kl_image";
+  if (round) {
+    className += " kl_image--round";
+  }
+  if (responsive) {
+    className += " kl_image--responsive";
+  }
   return _react.default.createElement("img", {
     src: src,
+    width: width,
+    height: height,
     alt: alt,
     className: className
   });
@@ -29054,6 +29066,29 @@ var Navbar = function (_a) {
   return _react.default.createElement("nav", null, children);
 };
 exports.default = Navbar;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/atoms/Line/Line.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Line = function (_a) {
+  var color = _a.color,
+    thickness = _a.thickness,
+    width = _a.width;
+  var lineStyle = {
+    backgroundColor: color,
+    height: thickness,
+    width: width || '100%'
+  };
+  return _react.default.createElement("span", {
+    style: lineStyle
+  });
+};
+exports.default = Line;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js":[function(require,module,exports) {
 "use strict";
 
@@ -29063,14 +29098,21 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _Link = _interopRequireDefault(require("../../atoms/Link/Link.js"));
+var _Line = _interopRequireDefault(require("../../atoms/Line/Line.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var Menu = function (_a) {
   var items = _a.items;
   var _b = _react.default.useState(false),
     isOpen = _b[0],
     setIsOpen = _b[1];
+  var _c = _react.default.useState(false),
+    isHover = _c[0],
+    setIsHover = _c[1];
   var toggleMenu = function () {
     setIsOpen(!isOpen);
+  };
+  var toggleMenuIcon = function () {
+    setIsHover(!isHover);
   };
   var renderMenuItem = function (items, className) {
     return _react.default.createElement("ul", {
@@ -29088,11 +29130,25 @@ var Menu = function (_a) {
     className: "kl_menu"
   }, _react.default.createElement("button", {
     className: "kl_menu__button",
-    onClick: toggleMenu
-  }, "Menu"), isOpen && renderMenuItem(items, "kl_menu__mobile_nav"), renderMenuItem(items, "kl_menu__nav"));
+    onClick: toggleMenu,
+    onMouseEnter: toggleMenuIcon,
+    onMouseLeave: toggleMenuIcon
+  }, _react.default.createElement(_Line.default, {
+    width: 32,
+    color: '#213547',
+    thickness: 2
+  }), _react.default.createElement(_Line.default, {
+    width: 32,
+    color: '#213547',
+    thickness: 2
+  }), _react.default.createElement(_Line.default, {
+    width: 32,
+    color: '#213547',
+    thickness: 2
+  })), isOpen && renderMenuItem(items, "kl_menu__mobile_nav"), renderMenuItem(items, "kl_menu__nav"));
 };
 exports.default = Menu;
-},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","../../atoms/Line/Line.js":"../../../node_modules/@kl.e/react/lib/atoms/Line/Line.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29212,6 +29268,18 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@kl.e/scss/src/lib/Navbar.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@kl.e/scss/src/lib/Image.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -29219,10 +29287,17 @@ var _react = _interopRequireDefault(require("react"));
 var _client = require("react-dom/client");
 var _react2 = require("@kl.e/react");
 require("@kl.e/scss/src/lib/Menu.css");
+require("@kl.e/scss/src/lib/Navbar.css");
+require("@kl.e/scss/src/lib/Image.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var rootElement = document.getElementById("root");
 if (rootElement) {
-  (0, _client.createRoot)(rootElement).render(_react.default.createElement(_react.default.StrictMode, null, _react.default.createElement("div", null, _react.default.createElement(_react2.Navbar, null, _react.default.createElement(_react2.Menu, {
+  (0, _client.createRoot)(rootElement).render(_react.default.createElement(_react.default.StrictMode, null, _react.default.createElement("div", null, _react.default.createElement(_react2.Navbar, null, _react.default.createElement(_react2.Image, {
+    src: "https://via.placeholder.com/150",
+    height: 40,
+    round: true,
+    alt: "Logo"
+  }), _react.default.createElement(_react2.Menu, {
     items: [{
       title: "Home",
       href: "#"
@@ -29235,7 +29310,7 @@ if (rootElement) {
     }]
   })))));
 }
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Menu.css":"../../../node_modules/@kl.e/scss/src/lib/Menu.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Menu.css":"../../../node_modules/@kl.e/scss/src/lib/Menu.css","@kl.e/scss/src/lib/Navbar.css":"../../../node_modules/@kl.e/scss/src/lib/Navbar.css","@kl.e/scss/src/lib/Image.css":"../../../node_modules/@kl.e/scss/src/lib/Image.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29260,7 +29335,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63922" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50176" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

@@ -9,7 +9,7 @@
  =            Global text colors               =
  =============================================*/
 
-$body-text-color: var(--kp-body-text-color, $white) !default;
+$body-text-color: var(--kp-body-text-color, $dark) !default;
 $text-link-color: var(--kp-text-link-color, $dark) !default;
 $text-link-color-hover: var(--kp-text-link-color-hover, $yellow) !default;
 $text-link-color-active: var(--kp-text-link-color-active, $dark) !default;
@@ -28,3 +28,11 @@ $btn-primary-bg-color-hover: var(
   --kp-btn-primary-hover-bg-color,
   $white
 ) !default;
+
+/*=============================================
+ =            Global varible                  =
+ =============================================*/
+
+$body-color : var(--kp-body-color, $white) !default;
+$border-color : var(--kp-border-color, $dark-light) !default;
+

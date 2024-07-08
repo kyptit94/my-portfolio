@@ -1,0 +1,9 @@
+.kl_image {
+    &.kl_image--round {
+        border-radius: 50%;
+    }
+
+    &.kl_image--responsive {
+        object-fit: cover;
+    }
+}

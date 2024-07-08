@@ -85,6 +85,9 @@
  =            Buttons                         =
  =============================================*/
 /*=============================================
+ =            Global varible                  =
+ =============================================*/
+/*=============================================
 =            Foundation Typography            =
 =============================================*/
 /*=============================================
@@ -438,7 +441,7 @@ template {
 }
 
 :root {
-  --kp-body-text-color: #565656;
+  --kp-body-text-color: rgba(60, 60, 60, 0.1215686275);
   --kp-body-bg-color: #eee6cd;
   --kp-link-color: #303030;
   --kp-link-color-active: #65265d;
@@ -460,6 +463,8 @@ template {
   --kp-h4-font-weight: 400;
   --kp-h5-font-weight: 300;
   --kp-h6-font-weight: 300;
+  --kp-body-color: #fff;
+  --kp-border-color: #303030;
 }
 
 /*=====  End of Base  ======*/

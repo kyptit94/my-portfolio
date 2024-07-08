@@ -1,8 +1,9 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Menu } from "@kl.e/react";
-import { Navbar } from "@kl.e/react";
+import { Menu, Navbar, Image } from "@kl.e/react";
 import "@kl.e/scss/src/lib/Menu.css";
+import "@kl.e/scss/src/lib/Navbar.css";
+import "@kl.e/scss/src/lib/Image.css";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -10,6 +11,7 @@ if (rootElement) {
     <React.StrictMode>
       <div>
         <Navbar>
+          <Image src="https://via.placeholder.com/150" height={40} round alt="Logo" />
           <Menu items={
             [
               { title: "Home", href: "#" },

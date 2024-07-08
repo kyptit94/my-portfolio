@@ -76,6 +76,9 @@
  =            Buttons                         =
  =============================================*/
 /*=============================================
+ =            Global varible                  =
+ =============================================*/
+/*=============================================
 =            Foundation Typography            =
 =============================================*/
 /*=============================================
@@ -90,6 +93,8 @@
 .kl_menu .kl_menu__nav {
   display: flex;
   gap: 1rem;
+  padding: 0px;
+  margin: 0px;
   align-items: center;
   list-style: none;
 }
@@ -119,6 +124,23 @@
 .kl_menu .kl_menu__button {
   display: block;
   float: right;
+  border: 1px solid var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
+  box-shadow: 0px 0px 5px 0px var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
+  background: var(--kp-body-color, #fff);
+}
+.kl_menu .kl_menu__button:hover {
+  box-shadow: 5px 5px 10px 5px var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
+}
+.kl_menu .kl_menu__button:hover svg {
+  font-weight: bold;
+  width: 32px;
+  height: 32px;
+}
+.kl_menu .kl_menu__button svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--kp-text-link-color, #303030);
+  font-weight: bold;
 }
 .kl_menu .kl_menu__nav {
   display: none;

@@ -1,0 +1,100 @@
+/**=========================================================================================================
+============================================================================================================
+============================================================================================================
+======================================== VARIABLES =========================================================
+============================================================================================================
+============================================================================================================
+==========================================================================================================**/
+/**
+* TABLE OF CONTENTS
+*
+* COLORS
+* Brand Colors ................................. These are the main brand colors. They will be used for the most
+* Neutral Colors ............................... white, black, gray scale, secondary colors
+* Ultinity colors .............................. Other colors to represent states: success, warning, error, etc.
+*
+* TYPOGRAPHY 
+* Font Family .................................. The font family used in the design system
+* Font weight .................................. The font weight
+* Font sizes ................................... The font size for body text, paragraph, heading, etc.
+* Heading sizes ................................ The font size for heading
+*
+* BREAKPOINTS
+* Breakpoints .................................. Global responsive breakpoints definitions
+*
+* SPACING
+* Spacing ...................................... Global spacing definitions
+**/
+/*=============================================
+=            COLORS            =
+=============================================*/
+/* Brand Colors */
+/*=====  End of COLORS  ======*/
+/*=============================================
+=            TYPOGRAPHY            =
+=============================================*/
+/**
+ *
+ * 1) Lato font is used for the heading mostly
+ * 2) Arial font is used for the body text
+ */
+/* Font Families */
+/* 1 */
+/* 2 */
+/* Font sizes */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 18px */
+/* 20px */
+/* Heading sizes */
+/* 22px */
+/* 20px */
+/* 18px */
+/* 16px */
+/* 14px */
+/* 12px */
+/* Font weight */
+/*===== End of TYPOGRAPHY  ======*/
+/*=============================================
+=            BREAKPOINTS            =
+=============================================*/
+/*=====  End of BREAKPOINTS  ======*/
+/*=============================================
+=                   Spacing                   =
+=============================================*/
+/**
+ *
+ * This file defines the actual colors that will be used for styling. They will default to the palette that
+ * is defined in the variables file, but can be overridden by the devs with their own custom colors.
+ *
+ */
+/*=============================================
+ =            Global text colors               =
+ =============================================*/
+/*=============================================
+ =            Buttons                         =
+ =============================================*/
+/*=============================================
+ =            Global varible                  =
+ =============================================*/
+/*=============================================
+=            Foundation Typography            =
+=============================================*/
+/*=============================================
+=            Foundation Heading Size          =
+=============================================*/
+/*=============================================
+=            Heading font weights             =
+=============================================*/
+/*=============================================
+=            MIXINS                           =
+=============================================*/
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--kp-body-color, #fff);
+  border-bottom: 1px solid var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
+}
