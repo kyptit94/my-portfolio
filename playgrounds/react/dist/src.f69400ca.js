@@ -29039,6 +29039,21 @@ var Margin = function (_a) {
   }, children);
 };
 exports.default = Margin;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/atoms/Navbar/Navbar.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Navbar = function (_a) {
+  var children = _a.children;
+  // Implement your Navbar component here
+  return _react.default.createElement("nav", null, children);
+};
+exports.default = Navbar;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js":[function(require,module,exports) {
 "use strict";
 
@@ -29119,6 +29134,12 @@ Object.defineProperty(exports, "Menu", {
     return _Menu.default;
   }
 });
+Object.defineProperty(exports, "Navbar", {
+  enumerable: true,
+  get: function () {
+    return _Navbar.default;
+  }
+});
 Object.defineProperty(exports, "Text", {
   enumerable: true,
   get: function () {
@@ -29131,9 +29152,10 @@ var _Text = _interopRequireDefault(require("./atoms/Text/Text.js"));
 var _Link = _interopRequireDefault(require("./atoms/Link/Link.js"));
 var _Image = _interopRequireDefault(require("./atoms/Image/Image.js"));
 var _Margin = _interopRequireDefault(require("./atoms/Margin/Margin.js"));
+var _Navbar = _interopRequireDefault(require("./atoms/Navbar/Navbar.js"));
 var _Menu = _interopRequireDefault(require("./molecules/Menu/Menu.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@kl.e/react/lib/atoms/Button/Button.js","./atoms/Heading/Heading.js":"../../../node_modules/@kl.e/react/lib/atoms/Heading/Heading.js","./atoms/Text/Text.js":"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js","./atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","./atoms/Image/Image.js":"../../../node_modules/@kl.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@kl.e/react/lib/atoms/Margin/Margin.js","./molecules/Menu/Menu.js":"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Button/Button.js":"../../../node_modules/@kl.e/react/lib/atoms/Button/Button.js","./atoms/Heading/Heading.js":"../../../node_modules/@kl.e/react/lib/atoms/Heading/Heading.js","./atoms/Text/Text.js":"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js","./atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","./atoms/Image/Image.js":"../../../node_modules/@kl.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@kl.e/react/lib/atoms/Margin/Margin.js","./atoms/Navbar/Navbar.js":"../../../node_modules/@kl.e/react/lib/atoms/Navbar/Navbar.js","./molecules/Menu/Menu.js":"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -29200,11 +29222,7 @@ require("@kl.e/scss/src/lib/Menu.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var rootElement = document.getElementById("root");
 if (rootElement) {
-  (0, _client.createRoot)(rootElement).render(_react.default.createElement(_react.default.StrictMode, null, _react.default.createElement("div", {
-    style: {
-      background: "#000"
-    }
-  }, _react.default.createElement(_react2.Menu, {
+  (0, _client.createRoot)(rootElement).render(_react.default.createElement(_react.default.StrictMode, null, _react.default.createElement("div", null, _react.default.createElement(_react2.Navbar, null, _react.default.createElement(_react2.Menu, {
     items: [{
       title: "Home",
       href: "#"
@@ -29215,7 +29233,7 @@ if (rootElement) {
       title: "Contact",
       href: "#contact"
     }]
-  }))));
+  })))));
 }
 },{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Menu.css":"../../../node_modules/@kl.e/scss/src/lib/Menu.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -29242,7 +29260,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55824" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63922" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

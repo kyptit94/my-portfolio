@@ -2,7 +2,7 @@
 .kl_menu {
     .kl_menu__nav {
         display: flex;
-        justify-content: space-between;
+        gap: 1rem;
         align-items: center;
         list-style: none;
         
@@ -12,16 +12,30 @@
                 color: $text-link-color;
                 text-decoration: none;
                 cursor: pointer;
-            }
 
-            &:hover {
-                color: $text-link-color-hover;
+                @include tablet {
+                    font-size: $fs-sm;
+                }
+
+                @include laptop {
+                    font-size: $fs-md;
+                }
+
+                @include desktop {
+                    font-size: $fs-xl;
+                }
+
+                &:hover {
+                    color: $text-link-color-hover;
+                }
             }
+            
         }
     }
 
     .kl_menu__button {
         display: block;
+        float: right;
     }
 
     .kl_menu__nav {
@@ -33,7 +47,19 @@
             display: none
         }
         .kl_menu__nav {
-           display: block;
+           display: flex;
+        }
+    }
+
+    @include laptop {
+        .kl_menu__nav {
+            gap: 2rem;
+        }
+    }
+
+    @include desktop {
+        .kl_menu__nav {
+            gap: 3rem;
         }
     }
 }
