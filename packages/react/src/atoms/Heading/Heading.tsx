@@ -2,13 +2,13 @@ import React from 'react';
 
 interface HeadingProps {
     level: number;
-    text: string;
+    children: React.ReactNode;
 }
 
-const Heading: React.FC<HeadingProps> = ({ level, text }) => {
+const Heading: React.FC<HeadingProps> = ({ level, children }) => {
     const Tag = `h${level}` as keyof JSX.IntrinsicElements;
 
-    return <Tag>{text}</Tag>;
+    return <Tag>{children}</Tag>;
 };
 
 export default Heading;

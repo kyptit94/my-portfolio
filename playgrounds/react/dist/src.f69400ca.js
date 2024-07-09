@@ -28935,9 +28935,9 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var Heading = function (_a) {
   var level = _a.level,
-    text = _a.text;
+    children = _a.children;
   var Tag = "h".concat(level);
-  return _react.default.createElement(Tag, null, text);
+  return _react.default.createElement(Tag, null, children);
 };
 exports.default = Heading;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js":[function(require,module,exports) {
@@ -29136,7 +29136,28 @@ var Menu = function (_a) {
   }, renderMenuItem(items, "kl_menu__mobile_nav ")), renderMenuItem(items, "kl_menu__nav"));
 };
 exports.default = Menu;
-},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","../../atoms/MobileIcon/MobileIcon.js":"../../../node_modules/@kl.e/react/lib/atoms/MobileIcon/MobileIcon.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","../../atoms/MobileIcon/MobileIcon.js":"../../../node_modules/@kl.e/react/lib/atoms/MobileIcon/MobileIcon.js"}],"../../../node_modules/@kl.e/react/lib/molecules/Label/Label.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
+var Label = function (_a) {
+  var title = _a.title,
+    sub_title = _a.sub_title;
+  return _react.default.createElement("div", {
+    className: 'kl_label'
+  }, _react.default.createElement("div", {
+    className: 'kl_label__title'
+  }, title), _react.default.createElement("div", {
+    className: 'kl_label__sub_title'
+  }, sub_title));
+};
+exports.default = Label;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29158,6 +29179,12 @@ Object.defineProperty(exports, "Image", {
   enumerable: true,
   get: function () {
     return _Image.default;
+  }
+});
+Object.defineProperty(exports, "Label", {
+  enumerable: true,
+  get: function () {
+    return _Label.default;
   }
 });
 Object.defineProperty(exports, "Link", {
@@ -29198,8 +29225,9 @@ var _Image = _interopRequireDefault(require("./atoms/Image/Image.js"));
 var _Margin = _interopRequireDefault(require("./atoms/Margin/Margin.js"));
 var _Navbar = _interopRequireDefault(require("./atoms/Navbar/Navbar.js"));
 var _Menu = _interopRequireDefault(require("./molecules/Menu/Menu.js"));
+var _Label = _interopRequireDefault(require("./molecules/Label/Label.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@kl.e/react/lib/atoms/Button/Button.js","./atoms/Heading/Heading.js":"../../../node_modules/@kl.e/react/lib/atoms/Heading/Heading.js","./atoms/Text/Text.js":"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js","./atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","./atoms/Image/Image.js":"../../../node_modules/@kl.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@kl.e/react/lib/atoms/Margin/Margin.js","./atoms/Navbar/Navbar.js":"../../../node_modules/@kl.e/react/lib/atoms/Navbar/Navbar.js","./molecules/Menu/Menu.js":"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Button/Button.js":"../../../node_modules/@kl.e/react/lib/atoms/Button/Button.js","./atoms/Heading/Heading.js":"../../../node_modules/@kl.e/react/lib/atoms/Heading/Heading.js","./atoms/Text/Text.js":"../../../node_modules/@kl.e/react/lib/atoms/Text/Text.js","./atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","./atoms/Image/Image.js":"../../../node_modules/@kl.e/react/lib/atoms/Image/Image.js","./atoms/Margin/Margin.js":"../../../node_modules/@kl.e/react/lib/atoms/Margin/Margin.js","./atoms/Navbar/Navbar.js":"../../../node_modules/@kl.e/react/lib/atoms/Navbar/Navbar.js","./molecules/Menu/Menu.js":"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js","./molecules/Label/Label.js":"../../../node_modules/@kl.e/react/lib/molecules/Label/Label.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -29268,6 +29296,12 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@kl.e/scss/src/lib/Label.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -29277,6 +29311,7 @@ var _react2 = require("@kl.e/react");
 require("@kl.e/scss/src/lib/Menu.css");
 require("@kl.e/scss/src/lib/Navbar.css");
 require("@kl.e/scss/src/lib/Image.css");
+require("@kl.e/scss/src/lib/Label.css");
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var rootElement = document.getElementById("root");
 if (rootElement) {
@@ -29296,9 +29331,12 @@ if (rootElement) {
       title: "Contact",
       href: "#contact"
     }]
-  })))));
+  })), _react.default.createElement(_react2.Label, {
+    title: "Choose",
+    sub_title: "English Skill To Learn"
+  }))));
 }
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Menu.css":"../../../node_modules/@kl.e/scss/src/lib/Menu.css","@kl.e/scss/src/lib/Navbar.css":"../../../node_modules/@kl.e/scss/src/lib/Navbar.css","@kl.e/scss/src/lib/Image.css":"../../../node_modules/@kl.e/scss/src/lib/Image.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@kl.e/react":"../../../node_modules/@kl.e/react/lib/index.js","@kl.e/scss/src/lib/Menu.css":"../../../node_modules/@kl.e/scss/src/lib/Menu.css","@kl.e/scss/src/lib/Navbar.css":"../../../node_modules/@kl.e/scss/src/lib/Navbar.css","@kl.e/scss/src/lib/Image.css":"../../../node_modules/@kl.e/scss/src/lib/Image.css","@kl.e/scss/src/lib/Label.css":"../../../node_modules/@kl.e/scss/src/lib/Label.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29323,7 +29361,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64609" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52806" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

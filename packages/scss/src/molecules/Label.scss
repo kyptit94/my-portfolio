@@ -1,0 +1,14 @@
+@import './foundations/all';
+
+.kl_label {
+    line-height: 35px;
+    .kl_label__title {
+        font-size: 40px;
+        font-weight: $kp-h1-font-weight;
+    }
+
+    .kl_label__sub_title {
+        font-size: 30px;
+        font-weight: $kp-h6-font-weight;
+    }
+}

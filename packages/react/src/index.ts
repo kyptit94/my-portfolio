@@ -7,5 +7,6 @@ import Image from "./atoms/Image";
 import Margin from "./atoms/Margin";
 import Navbar from "./atoms/Navbar";
 import Menu from "./molecules/Menu";
+import Label from "./molecules/Label";
 
-export { Button, Heading, Text, Link, Image, Margin, Menu, Navbar};
+export { Button, Heading, Text, Link, Image, Margin, Menu, Navbar, Label};

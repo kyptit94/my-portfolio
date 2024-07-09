@@ -1,9 +1,10 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Menu, Navbar, Image } from "@kl.e/react";
+import { Menu, Navbar, Image, Label } from "@kl.e/react";
 import "@kl.e/scss/src/lib/Menu.css";
 import "@kl.e/scss/src/lib/Navbar.css";
 import "@kl.e/scss/src/lib/Image.css";
+import "@kl.e/scss/src/lib/Label.css";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -20,6 +21,7 @@ if (rootElement) {
             ]
           } />
         </Navbar>
+        <Label title="Choose" sub_title="English Skill To Learn" />
       </div>
     </React.StrictMode>
   );
