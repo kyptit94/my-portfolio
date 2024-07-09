@@ -17,7 +17,7 @@ var Menu = function (_a) {
     return (React.createElement("div", { className: 'kl_menu' },
         React.createElement("button", { className: "kl_menu__button", onClick: toggleMenu, onMouseEnter: toggleMenuIcon, onMouseLeave: toggleMenuIcon },
             React.createElement(Line, null)),
-        renderMenuItem(items, "kl_menu__mobile_nav " + (isOpen ? 'open' : '')),
+        React.createElement("div", { className: "kl_menu__mobile_wrapper ".concat(isOpen ? 'open' : '') }, renderMenuItem(items, "kl_menu__mobile_nav ")),
         renderMenuItem(items, "kl_menu__nav")));
 };
 

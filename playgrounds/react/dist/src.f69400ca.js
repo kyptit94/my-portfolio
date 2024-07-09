@@ -29131,7 +29131,9 @@ var Menu = function (_a) {
     onClick: toggleMenu,
     onMouseEnter: toggleMenuIcon,
     onMouseLeave: toggleMenuIcon
-  }, _react.default.createElement(_MobileIcon.default, null)), renderMenuItem(items, "kl_menu__mobile_nav " + (isOpen ? 'open' : '')), renderMenuItem(items, "kl_menu__nav"));
+  }, _react.default.createElement(_MobileIcon.default, null)), _react.default.createElement("div", {
+    className: "kl_menu__mobile_wrapper ".concat(isOpen ? 'open' : '')
+  }, renderMenuItem(items, "kl_menu__mobile_nav ")), renderMenuItem(items, "kl_menu__nav"));
 };
 exports.default = Menu;
 },{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","../../atoms/MobileIcon/MobileIcon.js":"../../../node_modules/@kl.e/react/lib/atoms/MobileIcon/MobileIcon.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
@@ -29321,7 +29323,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53460" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64609" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

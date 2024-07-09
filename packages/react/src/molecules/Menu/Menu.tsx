@@ -41,7 +41,9 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
             <button className={`kl_menu__button`} onClick={toggleMenu} onMouseEnter={toggleMenuIcon} onMouseLeave={toggleMenuIcon}>
                 <MobileIcon />
             </button>
-            {renderMenuItem(items, `kl_menu__mobile_nav ` + (isOpen ? 'open' : ''))}
+            <div className={`kl_menu__mobile_wrapper ${isOpen ? 'open' : ''}`}>
+                {renderMenuItem(items, `kl_menu__mobile_nav `)}
+            </div>
             {renderMenuItem(items, "kl_menu__nav")}
         </div>
     );
