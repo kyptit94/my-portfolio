@@ -1,4 +1,45 @@
 @import './foundations/all';
+
+.mobile_icon {
+    width: 24px;
+
+    .mobile_icon__top--line,
+    .mobile_icon__middle--line,
+    .mobile_icon__bottom--line {
+        display: block;
+        height: 2px;
+        background: rgba(0, 0, 0, 0.322);
+        margin: 5px 0px;
+        transition: width 0.3s ease;
+    }
+
+    .mobile_icon__middle--line {
+        width: 80%;
+    }
+
+    .mobile_icon__top--line {
+        width: 40%;
+    }
+
+    .mobile_icon__bottom--line {
+        width: 60%;
+    }
+
+    &:hover {
+        .mobile_icon__top--line {
+            width: 100%;
+        }
+
+        .mobile_icon__middle--line {
+            width: 50%;
+        }
+
+        .mobile_icon__bottom--line {
+            width: 80%;
+        }
+    }
+}
+
 .kl_menu {
     .kl_menu__nav {
         display: flex;
@@ -7,7 +48,7 @@
         margin: 0px;
         align-items: center;
         list-style: none;
-        
+
 
         .kl_menu__nav__item {
             a {
@@ -31,7 +72,7 @@
                     color: $text-link-color-hover;
                 }
             }
-            
+
         }
     }
 
@@ -41,34 +82,52 @@
         border: 1px solid $border-color;
         box-shadow: 0px 0px 5px 0px $border-color;
         background: $body-color;
-
-        &:hover {
-            svg {
-                font-weight: bold;
-                width: 32px;
-                height: 32px;
-            }
-
-            box-shadow: 5px 5px 10px 5px $border-color;
-        }
-        svg {
-            width: 30px;
-            height: 30px;
-            fill: $text-link-color;
-            font-weight: bold;
-        }
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     .kl_menu__nav {
         display: none;
     }
 
+    .kl_menu__mobile_nav {
+        visibility: hidden;
+        position: fixed;
+        opacity: 0;
+        list-style: none;
+        transition: opacity 1s ease-in-out;
+        padding: 0px;
+        &.open {
+            visibility: visible;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+            background-color: $body-color;
+            overflow-y: auto;
+        }
+
+        .kl_menu__nav__item {
+            border-bottom: 1px solid $border-color;
+            padding: 10px 10px;
+            a {
+                color: $text-link-color;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+
     @include tablet {
         .kl_menu__button {
             display: none
         }
+
         .kl_menu__nav {
-           display: flex;
+            display: flex;
         }
     }
 

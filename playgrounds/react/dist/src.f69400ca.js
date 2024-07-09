@@ -29066,7 +29066,7 @@ var Navbar = function (_a) {
   return _react.default.createElement("nav", null, children);
 };
 exports.default = Navbar;
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/atoms/Line/Line.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/atoms/MobileIcon/MobileIcon.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29075,18 +29075,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
-var Line = function (_a) {
-  var color = _a.color,
-    thickness = _a.thickness,
-    width = _a.width;
-  var lineStyle = {
-    backgroundColor: color,
-    height: thickness,
-    width: width || '100%'
-  };
-  return _react.default.createElement("span", {
-    style: lineStyle
-  });
+var Line = function () {
+  return _react.default.createElement("div", {
+    className: 'mobile_icon'
+  }, _react.default.createElement("span", {
+    className: 'mobile_icon__top--line'
+  }), _react.default.createElement("span", {
+    className: 'mobile_icon__middle--line'
+  }), _react.default.createElement("span", {
+    className: 'mobile_icon__bottom--line'
+  }));
 };
 exports.default = Line;
 },{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@kl.e/react/lib/molecules/Menu/Menu.js":[function(require,module,exports) {
@@ -29098,7 +29096,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _Link = _interopRequireDefault(require("../../atoms/Link/Link.js"));
-var _Line = _interopRequireDefault(require("../../atoms/Line/Line.js"));
+var _MobileIcon = _interopRequireDefault(require("../../atoms/MobileIcon/MobileIcon.js"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { default: e }; }
 var Menu = function (_a) {
   var items = _a.items;
@@ -29127,28 +29125,16 @@ var Menu = function (_a) {
     }));
   };
   return _react.default.createElement("div", {
-    className: "kl_menu"
+    className: 'kl_menu'
   }, _react.default.createElement("button", {
     className: "kl_menu__button",
     onClick: toggleMenu,
     onMouseEnter: toggleMenuIcon,
     onMouseLeave: toggleMenuIcon
-  }, _react.default.createElement(_Line.default, {
-    width: 32,
-    color: '#213547',
-    thickness: 2
-  }), _react.default.createElement(_Line.default, {
-    width: 32,
-    color: '#213547',
-    thickness: 2
-  }), _react.default.createElement(_Line.default, {
-    width: 32,
-    color: '#213547',
-    thickness: 2
-  })), isOpen && renderMenuItem(items, "kl_menu__mobile_nav"), renderMenuItem(items, "kl_menu__nav"));
+  }, _react.default.createElement(_MobileIcon.default, null)), renderMenuItem(items, "kl_menu__mobile_nav " + (isOpen ? 'open' : '')), renderMenuItem(items, "kl_menu__nav"));
 };
 exports.default = Menu;
-},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","../../atoms/Line/Line.js":"../../../node_modules/@kl.e/react/lib/atoms/Line/Line.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","../../atoms/Link/Link.js":"../../../node_modules/@kl.e/react/lib/atoms/Link/Link.js","../../atoms/MobileIcon/MobileIcon.js":"../../../node_modules/@kl.e/react/lib/atoms/MobileIcon/MobileIcon.js"}],"../../../node_modules/@kl.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29335,7 +29321,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50176" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53460" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

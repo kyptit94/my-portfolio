@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from '../../atoms/Link';
-import Line from '../../atoms/Line';
-import Margin from '../../atoms/Margin';
+import MobileIcon from '../../atoms/MobileIcon';
 
 interface MenuItem {
     title: string;
@@ -36,15 +35,13 @@ const Menu: React.FC<MenuProps> = ({ items }) => {
             ))}
         </ul>
     )
-
+    
     return (
-        <div className="kl_menu">
+        <div className='kl_menu'>
             <button className={`kl_menu__button`} onClick={toggleMenu} onMouseEnter={toggleMenuIcon} onMouseLeave={toggleMenuIcon}>
-                <Line width={32} color='#213547' thickness={2} />
-                <Line width={32} color='#213547' thickness={2} />
-                <Line width={32} color='#213547' thickness={2} />
+                <MobileIcon />
             </button>
-            {isOpen && renderMenuItem(items, "kl_menu__mobile_nav")}
+            {renderMenuItem(items, `kl_menu__mobile_nav ` + (isOpen ? 'open' : ''))}
             {renderMenuItem(items, "kl_menu__nav")}
         </div>
     );

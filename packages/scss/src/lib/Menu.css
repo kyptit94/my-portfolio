@@ -90,6 +90,37 @@
 /*=============================================
 =            MIXINS                           =
 =============================================*/
+.mobile_icon {
+  width: 24px;
+}
+.mobile_icon .mobile_icon__top--line,
+.mobile_icon .mobile_icon__middle--line,
+.mobile_icon .mobile_icon__bottom--line {
+  display: block;
+  height: 2px;
+  background: rgba(0, 0, 0, 0.322);
+  margin: 5px 0px;
+  transition: width 0.3s ease;
+}
+.mobile_icon .mobile_icon__middle--line {
+  width: 80%;
+}
+.mobile_icon .mobile_icon__top--line {
+  width: 40%;
+}
+.mobile_icon .mobile_icon__bottom--line {
+  width: 60%;
+}
+.mobile_icon:hover .mobile_icon__top--line {
+  width: 100%;
+}
+.mobile_icon:hover .mobile_icon__middle--line {
+  width: 50%;
+}
+.mobile_icon:hover .mobile_icon__bottom--line {
+  width: 80%;
+}
+
 .kl_menu .kl_menu__nav {
   display: flex;
   gap: 1rem;
@@ -127,23 +158,38 @@
   border: 1px solid var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
   box-shadow: 0px 0px 5px 0px var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
   background: var(--kp-body-color, #fff);
-}
-.kl_menu .kl_menu__button:hover {
-  box-shadow: 5px 5px 10px 5px var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
-}
-.kl_menu .kl_menu__button:hover svg {
-  font-weight: bold;
-  width: 32px;
-  height: 32px;
-}
-.kl_menu .kl_menu__button svg {
-  width: 30px;
-  height: 30px;
-  fill: var(--kp-text-link-color, #303030);
-  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .kl_menu .kl_menu__nav {
   display: none;
+}
+.kl_menu .kl_menu__mobile_nav {
+  visibility: hidden;
+  position: fixed;
+  opacity: 0;
+  list-style: none;
+  transition: opacity 1s ease-in-out;
+  padding: 0px;
+}
+.kl_menu .kl_menu__mobile_nav.open {
+  visibility: visible;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  background-color: var(--kp-body-color, #fff);
+  overflow-y: auto;
+}
+.kl_menu .kl_menu__mobile_nav .kl_menu__nav__item {
+  border-bottom: 1px solid var(--kp-border-color, rgba(60, 60, 60, 0.1215686275));
+  padding: 10px 10px;
+}
+.kl_menu .kl_menu__mobile_nav .kl_menu__nav__item a {
+  color: var(--kp-text-link-color, #303030);
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .kl_menu .kl_menu__button {

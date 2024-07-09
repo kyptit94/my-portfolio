@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from '../../atoms/Link/Link.js';
-import Line from '../../atoms/Line/Line.js';
+import Line from '../../atoms/MobileIcon/MobileIcon.js';
 
 var Menu = function (_a) {
     var items = _a.items;
@@ -14,12 +14,10 @@ var Menu = function (_a) {
     };
     var renderMenuItem = function (items, className) { return (React.createElement("ul", { className: className }, items.map(function (item, index) { return (React.createElement("li", { className: "kl_menu__nav__item", key: index },
         React.createElement(Link, { href: item.href }, item.title))); }))); };
-    return (React.createElement("div", { className: "kl_menu" },
+    return (React.createElement("div", { className: 'kl_menu' },
         React.createElement("button", { className: "kl_menu__button", onClick: toggleMenu, onMouseEnter: toggleMenuIcon, onMouseLeave: toggleMenuIcon },
-            React.createElement(Line, { width: 32, color: '#213547', thickness: 2 }),
-            React.createElement(Line, { width: 32, color: '#213547', thickness: 2 }),
-            React.createElement(Line, { width: 32, color: '#213547', thickness: 2 })),
-        isOpen && renderMenuItem(items, "kl_menu__mobile_nav"),
+            React.createElement(Line, null)),
+        renderMenuItem(items, "kl_menu__mobile_nav " + (isOpen ? 'open' : '')),
         renderMenuItem(items, "kl_menu__nav")));
 };
 
