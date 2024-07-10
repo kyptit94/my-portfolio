@@ -90,20 +90,36 @@
 /*=============================================
 =            MIXINS                           =
 =============================================*/
-.kl_label {
-  line-height: 35px;
+.kl_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+  width: 95%;
+  min-height: 200px;
 }
-.kl_label .kl_label__icon {
-  height: 30px;
-  width: 30px;
-  margin-left: 40px;
-  color: var(--kp-body-text-color, #303030);
+.kl_card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.kl_label .kl_label__title {
-  font-size: 40px;
-  font-weight: var(--kp-h1-font-weight, 700);
+.kl_card .kl_card__image {
+  position: absolute;
+  bottom: 0;
+  height: 150px;
+  left: 60%;
+  transform: none;
 }
-.kl_label .kl_label__sub_title {
+.kl_card .kl_card__image.rtl {
+  right: 60%;
+  transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.kl_card .kl_card__title {
   font-size: 30px;
+  font-weight: var(--kp-h1-font-weight, 700);
+  color: var(--kp-label-color, rgba(60, 60, 60, 0.1215686275));
+  text-decoration: none;
+}
+.kl_card .kl_card__sub_title {
+  font-size: 20px;
   font-weight: var(--kp-h6-font-weight, 300);
 }

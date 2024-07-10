@@ -1,15 +1,15 @@
 import React from 'react';
 
 var Image = function (_a) {
-    var src = _a.src, alt = _a.alt, width = _a.width, height = _a.height, round = _a.round, responsive = _a.responsive;
-    var className = "kl_image";
+    var src = _a.src, alt = _a.alt, width = _a.width, height = _a.height, round = _a.round, responsive = _a.responsive, className = _a.className;
+    var classN = "kl_image ".concat(className !== null && className !== void 0 ? className : "");
     if (round) {
-        className += " kl_image--round";
+        classN += " kl_image--round";
     }
     if (responsive) {
-        className += " kl_image--responsive";
+        classN += " kl_image--responsive";
     }
-    return React.createElement("img", { src: src, width: width, height: height, alt: alt, className: className });
+    return React.createElement("img", { src: src, width: width, height: height, alt: alt, className: classN });
 };
 
 export { Image as default };

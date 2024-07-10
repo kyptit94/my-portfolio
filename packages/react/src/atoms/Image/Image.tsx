@@ -7,20 +7,21 @@ interface ImageProps {
     height?: number;
     round?: boolean;
     responsive?: boolean;
+    className?: string;
 }
 
-const Image: React.FC<ImageProps> = ({ src, alt, width, height, round, responsive }) => {
-    let className = "kl_image"
+const Image: React.FC<ImageProps> = ({ src, alt, width, height, round, responsive, className }) => {
+    let classN = `kl_image ${className ?? ""}`
 
     if (round) {
-        className += " kl_image--round";
+        classN += " kl_image--round";
     }
 
     if(responsive) {
-        className += " kl_image--responsive";
+        classN += " kl_image--responsive";
     }
 
-    return <img src={src} width={width} height={height} alt={alt} className={className} />;
+    return <img src={src} width={width} height={height} alt={alt} className={classN} />;
 };
 
 export default Image;

@@ -465,6 +465,7 @@ template {
   --kp-h6-font-weight: 300;
   --kp-body-color: #fff;
   --kp-border-color: #303030;
+  --kp-label-color: rgba(60, 60, 60, 0.1215686275);
 }
 
 /*=====  End of Base  ======*/

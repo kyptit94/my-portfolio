@@ -6,6 +6,7 @@ interface ImageProps {
     height?: number;
     round?: boolean;
     responsive?: boolean;
+    className?: string;
 }
 declare const Image: React.FC<ImageProps>;
 export default Image;

@@ -1,0 +1,38 @@
+@import './foundations/all';
+
+.kl_card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    width: 95%;
+    min-height: 200px;
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .kl_card__image {
+        position: absolute;
+        bottom: 0;
+        height: 150px;
+        left: 60%;
+        transform: none;
+        &.rtl {
+            right: 60%;
+            transform: scaleX(-1);transform: scaleX(-1);
+        } 
+    }
+
+    .kl_card__title {
+        font-size: 30px;
+        font-weight: $kp-h1-font-weight;
+        color: $label-color;
+        text-decoration: none;
+    }
+
+    .kl_card__sub_title {
+        font-size: 20px;
+        font-weight: $kp-h6-font-weight;
+    }
+}

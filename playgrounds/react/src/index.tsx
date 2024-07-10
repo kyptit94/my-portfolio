@@ -1,10 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { Menu, Navbar, Image, Label } from "@kl.e/react";
+import { Menu, Navbar, Image, Label, Card } from "@kl.e/react";
+import { ChatBubbleOvalLeftEllipsisIcon } from '@heroicons/react/24/solid'
+import teacherImage from "../src/public/teacher.png";
 import "@kl.e/scss/src/lib/Menu.css";
 import "@kl.e/scss/src/lib/Navbar.css";
 import "@kl.e/scss/src/lib/Image.css";
 import "@kl.e/scss/src/lib/Label.css";
+import "@kl.e/scss/src/lib/Card.css";
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
@@ -21,7 +24,33 @@ if (rootElement) {
             ]
           } />
         </Navbar>
-        <Label title="Choose" sub_title="English Skill To Learn" />
+        <Label title="Choose" icon={<ChatBubbleOvalLeftEllipsisIcon />} sub_title="Test sub label" />
+        <Card
+          title="Vocalbunary"
+          image={teacherImage}
+          href="#"
+          background="#fff8db"
+          border="1px solid #fce67e"
+          description=""
+        />
+
+        <Card
+          title="Vocalbunary"
+          image={teacherImage}
+          href="#"
+          background="#fff8db"
+          border="1px solid #fce67e"
+          description=""
+        />
+
+        <Card
+          title="Vocalbunary"
+          image={teacherImage}
+          href="#"
+          background="#fff8db"
+          border="1px solid #fce67e"
+          description=""
+        />
       </div>
     </React.StrictMode>
   );
