@@ -1,0 +1,122 @@
+/**=========================================================================================================
+============================================================================================================
+============================================================================================================
+======================================== VARIABLES =========================================================
+============================================================================================================
+============================================================================================================
+==========================================================================================================**/
+/**
+* TABLE OF CONTENTS
+*
+* COLORS
+* Brand Colors ................................. These are the main brand colors. They will be used for the most
+* Neutral Colors ............................... white, black, gray scale, secondary colors
+* Ultinity colors .............................. Other colors to represent states: success, warning, error, etc.
+*
+* TYPOGRAPHY 
+* Font Family .................................. The font family used in the design system
+* Font weight .................................. The font weight
+* Font sizes ................................... The font size for body text, paragraph, heading, etc.
+* Heading sizes ................................ The font size for heading
+*
+* BREAKPOINTS
+* Breakpoints .................................. Global responsive breakpoints definitions
+*
+* SPACING
+* Spacing ...................................... Global spacing definitions
+**/
+/*=============================================
+=            COLORS            =
+=============================================*/
+/* Brand Colors */
+/*=====  End of COLORS  ======*/
+/*=============================================
+=            TYPOGRAPHY            =
+=============================================*/
+/**
+ *
+ * 1) Lato font is used for the heading mostly
+ * 2) Arial font is used for the body text
+ */
+/* Font Families */
+/* 1 */
+/* 2 */
+/* 3 */
+/* Font sizes */
+/* 12px */
+/* 14px */
+/* 16px */
+/* 18px */
+/* 20px */
+/* Heading sizes */
+/* 22px */
+/* 20px */
+/* 18px */
+/* 16px */
+/* 14px */
+/* 12px */
+/* Font weight */
+/*===== End of TYPOGRAPHY  ======*/
+/*=============================================
+=            BREAKPOINTS            =
+=============================================*/
+/*=====  End of BREAKPOINTS  ======*/
+/*=============================================
+=                   Spacing                   =
+=============================================*/
+/**
+ *
+ * This file defines the actual colors that will be used for styling. They will default to the palette that
+ * is defined in the variables file, but can be overridden by the devs with their own custom colors.
+ *
+ */
+/*=============================================
+ =            Global text colors               =
+ =============================================*/
+/*=============================================
+ =            Buttons                         =
+ =============================================*/
+/*=============================================
+ =            Global varible                  =
+ =============================================*/
+/*=============================================
+=            Foundation Typography            =
+=============================================*/
+/*=============================================
+=            Foundation Heading Size          =
+=============================================*/
+/*=============================================
+=            Heading font weights             =
+=============================================*/
+/*=============================================
+=            MIXINS                           =
+=============================================*/
+.kl_about {
+  display: grid;
+  justify-items: center;
+  padding: 100px 200px;
+  color: var(--kp-body-text-color, #fff);
+  font-family: var(--kp-body-font-family, "Poppins", sans-serif);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+.kl_about .kl_about__image {
+  box-shadow: -10px -10px 16px 0 rgba(104, 103, 103, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19), 10px 10px 16px 0 rgba(104, 103, 103, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.kl_about h1 {
+  margin: 10px 0px;
+  font-size: 50px;
+  font-weight: var(--kp-h1-font-weight, 700);
+}
+.kl_about h2 {
+  font-size: 28px;
+  margin: 10px 0px;
+  font-weight: var(--kp-h4-font-weight, 400);
+}
+.kl_about .kl_about__description {
+  font-size: 18px;
+  font-weight: 100;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+  text-align: center;
+}

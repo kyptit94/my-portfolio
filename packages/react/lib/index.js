@@ -8,4 +8,5 @@ export { default as Navbar } from './atoms/Navbar/Navbar.js';
 export { default as Menu } from './molecules/Menu/Menu.js';
 export { default as Label } from './molecules/Label/Label.js';
 export { default as Card } from './molecules/Card/Card.js';
+export { default as About } from './organisms/About/About.js';
 //# sourceMappingURL=index.js.map

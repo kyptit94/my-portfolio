@@ -1,9 +1,6 @@
 @import './foundations/all';
 nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: $body-color;
-    border-bottom: 1px solid $border-color;
+    justify-content: center;
 }

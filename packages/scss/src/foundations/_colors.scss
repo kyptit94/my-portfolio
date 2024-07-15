@@ -9,7 +9,7 @@
  =            Global text colors               =
  =============================================*/
 
-$body-text-color: var(--kp-body-text-color, $dark) !default;
+$body-text-color: var(--kp-body-text-color, $white) !default;
 $text-link-color: var(--kp-text-link-color, $dark) !default;
 $text-link-color-hover: var(--kp-text-link-color-hover, $yellow) !default;
 $text-link-color-active: var(--kp-text-link-color-active, $dark) !default;

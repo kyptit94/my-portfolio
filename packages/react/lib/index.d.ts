@@ -8,4 +8,5 @@ import Navbar from "./atoms/Navbar";
 import Menu from "./molecules/Menu";
 import Label from "./molecules/Label";
 import Card from "./molecules/Card";
-export { Button, Heading, Text, Link, Image, Margin, Menu, Navbar, Label, Card };
+import About from "./organisms/About";
+export { Button, Heading, Text, Link, Image, Margin, Menu, Navbar, Label, Card, About };
